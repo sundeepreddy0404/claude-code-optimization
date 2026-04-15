@@ -1,195 +1,226 @@
 # ⚡ Claude Code Optimization Guide
 
-> 🚀 Reduce token usage by **50–70%** while getting faster, cleaner, and more accurate responses.
+> 🚀 Reduce token usage by **50–70%** using structured prompting, scoped context, and efficient workflows.
 
-A high-impact guide for developers who want to **stop wasting tokens** and start using Claude Code efficiently.
-
----
-
-## 🔥 The Problem
-
-Most developers use Claude like this:
-
-❌ Explain this entire repo in detail  
-
-### Result:
-- 💸 High token usage  
-- 🐢 Slow responses  
-- 🤯 Overly verbose answers  
-- 📉 Poor signal-to-noise ratio  
+A technical guide for developers to optimize Claude Code usage by treating LLMs as **bounded-context systems** rather than unlimited reasoning engines.
 
 ---
 
-## ⚡ The Solution
+## 🧠 Problem Statement
 
-Use Claude **strategically, not blindly**.
+Large Language Models (LLMs) operate within a **finite context window** and process tokens sequentially.
 
-👉 The key: **Break problems into smaller, controlled steps**
-
----
-
-## 🚀 The 3-Step Optimization Method
-
-### 1️⃣ Summarize First
-Always start small:
-
-Summarize this codebase in under 100 words  
+Naive usage leads to:
+- Context saturation  
+- Redundant token consumption  
+- Increased latency  
+- Low signal-to-noise ratio  
 
 ---
 
-### 2️⃣ Narrow Scope
-Focus only on what matters:
+## ⚙️ Core Optimization Model
 
+Claude efficiency depends on 3 variables:
+
+- **Input size (context tokens)**
+- **Instruction clarity**
+- **Output constraints**
+
+Goal:
+> Minimize input + constrain output → maximize useful signal
+
+---
+
+## 🚀 Optimization Pipeline
+
+### 1. Context Minimization
+
+Only provide **relevant input**.
+
+❌ Bad:
+Explain this entire repository  
+
+✅ Good:
 Explain only the authentication module  
 
 ---
 
-### 3️⃣ Drill Down
-Target specific problems:
+### 2. Hierarchical Querying
 
-Debug this specific function  
+Decompose tasks into smaller steps:
+
+Step 1 → Summarize system  
+Step 2 → Isolate subsystem  
+Step 3 → Analyze function  
+
+Benefits:
+- Reduced token load  
+- Better reasoning accuracy  
+- Lower hallucination risk  
 
 ---
 
-## 🧠 Core Principle
+### 3. Output Constraint Engineering
 
-> Never ask Claude to do everything at once.
+Force structured outputs:
+
+Constraints:
+- Max 5 bullet points  
+- No repetition  
+- No obvious explanations  
+
+Impact:
+- Predictable outputs  
+- Reduced verbosity  
+- Token savings  
 
 ---
 
-## 🔥 Universal Prompt (Use Everywhere)
+### 4. Iterative Refinement
+
+Avoid single large prompts.
+
+Instead:
+
+Iteration 1 → Summary  
+Iteration 2 → Identify issue  
+Iteration 3 → Fix issue  
+
+This:
+- Minimizes context usage  
+- Improves precision over time  
+
+---
+
+## 🔥 Universal Optimization Prompt
 
 Be concise. Minimize tokens. No repetition. Output only essential information.
 
 ---
 
-## 🧩 High-Performance Prompts
+## 🧩 Prompt Patterns
 
-### 🐞 Debugging
+### Debugging
+
 Be concise. No repetition.
 
 Task: Debug this code.
 
 Output:
 - Issue  
+- Root cause  
 - Fix  
 - Code snippet only  
 
 ---
 
-### 📦 Code Explanation
-Explain this code.
+### Code Analysis
+
+Analyze this code.
 
 Constraints:
 - Max 5 bullet points  
-- No unnecessary explanation  
+- Focus on logic, not syntax  
+- Ignore obvious details  
 
 ---
 
-### 🔍 Refactoring
+### Refactoring
+
 Refactor this code.
 
 Constraints:
-- Keep functionality same  
+- Preserve functionality  
 - Reduce complexity  
-- Output only improved code  
+- Improve readability  
+- Output only code  
 
 ---
 
-### 🧠 Architecture Summary
-Summarize architecture.
+### Architecture Extraction
+
+Summarize system architecture.
 
 Constraints:
 - Max 100 words  
-- Bullet points only  
+- Bullet points  
+- Focus on components and interactions  
 
 ---
 
-## ⚡ Advanced Token Saving Techniques
+## ⚡ Token Efficiency Techniques
 
-- Avoid loading full repositories  
-- Always define scope explicitly  
-- Prefer summaries before deep dives  
-- Use bullet-point outputs  
-- Limit word count intentionally  
-- Avoid explaining obvious concepts  
-- Iterate instead of overloading  
+- Scope restriction  
+- Context chunking  
+- Output bounding  
+- Redundancy elimination  
+- Instruction compression  
 
 ---
 
-## 📉 Before vs After
+## 📉 Inefficient vs Optimized
 
-### ❌ Inefficient Usage
+### Inefficient
 Explain this entire codebase in detail  
 
 ---
 
-### ✅ Optimized Workflow
-Summarize this repo in 100 words  
-Then explain only the auth module  
-Then debug a specific function  
+### Optimized
+Summarize this codebase (100 words)  
+Explain auth module  
+Debug login function  
 
 ---
 
-## 🧠 Golden Rules
+## 📊 Performance Impact
 
-- Narrow scope > broad queries  
-- Step-by-step > one big prompt  
-- Precision > verbosity  
-- Iteration > dumping context  
-
----
-
-## 📊 Expected Results
-
-- 📉 50–70% fewer tokens  
-- ⚡ Faster response time  
-- 🎯 Higher accuracy  
-- 🧠 Cleaner and more relevant outputs  
+| Metric              | Result            |
+|--------------------|------------------|
+| Token Usage        | ↓ 50–70%         |
+| Response Time      | Faster           |
+| Output Quality     | Higher signal    |
+| Hallucination Rate | Reduced          |
 
 ---
 
-## 🛠️ Recommended Tool
+## 🛠️ Recommended Setup
 
-Use with MCP optimization:
+Use Claude Code with MCP optimization:
 
-token-optimizer-mcp  
+token-optimizer-mcp
 
 ---
 
-## 💡 Who Is This For?
+## 🧠 Engineering Principles
+
+- Narrow scope > broad prompts  
+- Iteration > monolithic queries  
+- Constraints > open-ended output  
+- Signal > verbosity  
+
+---
+
+## 💡 Target Audience
 
 - Developers using Claude Code  
-- AI-powered coding workflows  
-- Engineers hitting token limits  
-- Anyone optimizing LLM usage  
+- AI-assisted coding workflows  
+- Engineers optimizing LLM usage  
+- Systems focused on efficiency  
 
 ---
 
-## ⭐ Contribute
+## ⭐ Contribution
 
-Have better prompts or workflows?
-
-Pull requests are welcome 🚀  
-
----
-
-## 📣 Share
-
-If this helped you:
-
-⭐ Star the repo  
-🔁 Share with developers  
-💬 Spread smarter AI usage  
+Pull requests are welcome for:
+- New prompt patterns  
+- Optimization techniques  
+- Benchmark improvements  
 
 ---
 
 ## 🧠 Final Thought
 
-> The problem isn’t the AI — it’s how you ask.
+LLMs are not limited by intelligence —  
+they are limited by **context and instruction design**.
 
-Master the prompt → master the output.
-
----
-
-🔥 Built for developers who care about efficiency.
+Optimize both → unlock performance.
