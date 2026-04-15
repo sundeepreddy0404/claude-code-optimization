@@ -1,8 +1,18 @@
-# ⚡ Claude Code Optimization Guide
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude-Code%20Optimization-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Tokens-Save%2050--70%25-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/LLM-Efficiency-purple?style=for-the-badge"/>
+</p>
 
-> 🚀 Reduce token usage by **50–70%** using structured prompting, scoped context, and efficient workflows.
+<h1 align="center">⚡ Claude Code Optimization Guide</h1>
 
-A technical guide for developers to optimize Claude Code usage by treating LLMs as **bounded-context systems** rather than unlimited reasoning engines.
+<p align="center">
+  🚀 Reduce token usage by <b>50–70%</b> using structured prompting, scoped context, and efficient workflows.
+</p>
+
+<p align="center">
+  Built for developers who want <b>faster, cheaper, and higher-quality LLM outputs</b>.
+</p>
 
 ---
 
@@ -11,84 +21,64 @@ A technical guide for developers to optimize Claude Code usage by treating LLMs 
 Large Language Models (LLMs) operate within a **finite context window** and process tokens sequentially.
 
 Naive usage leads to:
-- Context saturation  
-- Redundant token consumption  
-- Increased latency  
-- Low signal-to-noise ratio  
+
+- 💸 High token consumption  
+- 🐢 Slow response time  
+- 🤯 Verbose, low-signal outputs  
+- 📉 Reduced reasoning quality  
 
 ---
 
-## ⚙️ Core Optimization Model
+## ⚙️ Optimization Model
 
-Claude efficiency depends on 3 variables:
+Claude efficiency depends on three variables:
 
-- **Input size (context tokens)**
-- **Instruction clarity**
-- **Output constraints**
+| Factor              | Description                     |
+|--------------------|--------------------------------|
+| Context Size        | Input tokens provided          |
+| Instruction Clarity | Task definition quality        |
+| Output Constraints  | Boundaries on response         |
 
-Goal:
-> Minimize input + constrain output → maximize useful signal
+> 🎯 Goal: Minimize input + constrain output → maximize useful signal
 
 ---
 
 ## 🚀 Optimization Pipeline
 
-### 1. Context Minimization
+### 1️⃣ Context Minimization
 
-Only provide **relevant input**.
-
-❌ Bad:
+❌ Bad  
 Explain this entire repository  
 
-✅ Good:
+✅ Good  
 Explain only the authentication module  
 
 ---
 
-### 2. Hierarchical Querying
+### 2️⃣ Hierarchical Querying
 
-Decompose tasks into smaller steps:
+Break complex tasks into structured steps:
 
 Step 1 → Summarize system  
-Step 2 → Isolate subsystem  
+Step 2 → Isolate module  
 Step 3 → Analyze function  
-
-Benefits:
-- Reduced token load  
-- Better reasoning accuracy  
-- Lower hallucination risk  
 
 ---
 
-### 3. Output Constraint Engineering
-
-Force structured outputs:
+### 3️⃣ Output Constraint Engineering
 
 Constraints:
 - Max 5 bullet points  
 - No repetition  
 - No obvious explanations  
 
-Impact:
-- Predictable outputs  
-- Reduced verbosity  
-- Token savings  
-
 ---
 
-### 4. Iterative Refinement
-
-Avoid single large prompts.
-
-Instead:
+### 4️⃣ Iterative Refinement
 
 Iteration 1 → Summary  
 Iteration 2 → Identify issue  
 Iteration 3 → Fix issue  
-
-This:
-- Minimizes context usage  
-- Improves precision over time  
 
 ---
 
@@ -98,9 +88,9 @@ Be concise. Minimize tokens. No repetition. Output only essential information.
 
 ---
 
-## 🧩 Prompt Patterns
+## 🧩 High-Performance Prompt Patterns
 
-### Debugging
+### 🐞 Debugging
 
 Be concise. No repetition.
 
@@ -114,18 +104,18 @@ Output:
 
 ---
 
-### Code Analysis
+### 📦 Code Analysis
 
 Analyze this code.
 
 Constraints:
 - Max 5 bullet points  
-- Focus on logic, not syntax  
+- Focus on logic  
 - Ignore obvious details  
 
 ---
 
-### Refactoring
+### 🔍 Refactoring
 
 Refactor this code.
 
@@ -137,14 +127,14 @@ Constraints:
 
 ---
 
-### Architecture Extraction
+### 🧠 Architecture Extraction
 
 Summarize system architecture.
 
 Constraints:
 - Max 100 words  
 - Bullet points  
-- Focus on components and interactions  
+- Focus on components + interactions  
 
 ---
 
@@ -160,12 +150,10 @@ Constraints:
 
 ## 📉 Inefficient vs Optimized
 
-### Inefficient
+❌ Inefficient  
 Explain this entire codebase in detail  
 
----
-
-### Optimized
+✅ Optimized  
 Summarize this codebase (100 words)  
 Explain auth module  
 Debug login function  
@@ -184,8 +172,6 @@ Debug login function
 ---
 
 ## 🛠️ Recommended Setup
-
-Use Claude Code with MCP optimization:
 
 token-optimizer-mcp
 
@@ -209,7 +195,7 @@ token-optimizer-mcp
 
 ---
 
-## ⭐ Contribution
+## ⭐ Contribute
 
 Pull requests are welcome for:
 - New prompt patterns  
@@ -218,9 +204,19 @@ Pull requests are welcome for:
 
 ---
 
+## 📣 Share
+
+If this helped you:
+
+⭐ Star the repo  
+🔁 Share with developers  
+💬 Spread smarter AI usage  
+
+---
+
 ## 🧠 Final Thought
 
 LLMs are not limited by intelligence —  
-they are limited by **context and instruction design**.
+they are limited by context and instruction design.
 
-Optimize both → unlock performance.
+Optimize both → unlock performance 🚀
